@@ -4,7 +4,8 @@ public class Main
 {
     public static void main(String[] args)
     {
-        MyArrayList array = new MyArrayList();
+        MyArrayList<Integer> array = new MyArrayList<>();
+        MyLinkedList<String> list = new MyLinkedList<>();
         Scanner userInput = new Scanner(System.in);
         String a;
         switch (userInput.nextInt())
@@ -39,17 +40,17 @@ public class Main
     public static void getArray()
     {
         Scanner scanner = new Scanner(System.in);
-        MyArrayList<Integer> array = new MyArrayList<>();
+        MyArrayList<Integer> Array = new MyArrayList<>();
         int n = scanner.nextInt();
         for (int i = 0; i < n; i++)
         {
-            array.add(scanner.nextInt());
+            Array.add(scanner.nextInt());
             if (i == (n-1))
             {
-                System.out.println(array.size());
+                System.out.println(Array.size());
                 for (int j = 0; j < n; j++)
                 {
-                    System.out.print(array.get(j));
+                    System.out.print(Array.get(j));
                     System.out.print(" ");
                 }
             }
@@ -57,5 +58,21 @@ public class Main
     }
     public static void getLinkedList()
     {
+        Scanner scanner = new Scanner(System.in);
+        MyLinkedList<String> List = new MyLinkedList<>();
+        int n = scanner.nextInt();
+        for (int i = 0; i < n; i++)
+        {
+            List.add(scanner.next());
+            if (i == (n-1))
+            {
+                System.out.println(List.size());
+                for (int j = 0; j < n; j++)
+                {
+                    System.out.print(List.get(j));
+                    System.out.print(" ");
+                }
+            }
+        }
     }
 }
